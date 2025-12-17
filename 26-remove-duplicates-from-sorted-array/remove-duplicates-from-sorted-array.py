@@ -4,16 +4,16 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        a=[]
         b=len(nums)
-        i=0
+        i=1
         j=1
-        while(i<b-1):
-            if(nums[i]==nums[j]):
-                nums.remove(nums[j])
-                b=b-1
+        for j in range(1,b):
+
+            if(nums[i-1]==nums[j]):
+                pass
             else:
+                nums[i]=nums[j]
                 i=i+1
-                j=j+1
-        k=len(nums)
+
+        k=len(nums[0:i])
         return k
