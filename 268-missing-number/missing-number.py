@@ -8,8 +8,7 @@ class Solution(object):
         i=0
         while(i<siz):
             if i not in nums:
-                a=i
-                return a
+                return i
             i=i+1
         return len(nums)
         
