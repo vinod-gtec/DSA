@@ -5,10 +5,11 @@ class Solution(object):
         :rtype: int
         """
         siz=len(nums)
-        i=0
-        while(i<siz):
-            if i not in nums:
+        v=[-1]*(siz+1)
+        for num  in nums:
+            v[num]=num
+        for i in range(len(v)):
+            if v[i]==-1:
                 return i
-            i=i+1
-        return len(nums)
-        
+        return 0
+            
