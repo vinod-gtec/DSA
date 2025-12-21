@@ -4,7 +4,6 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-
         siz=len(nums)
         i=0
         while(i<siz):
@@ -13,5 +12,4 @@ class Solution(object):
                 return a
             i=i+1
         return len(nums)
-    
         
