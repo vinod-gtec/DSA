@@ -8,8 +8,6 @@ class Solution(object):
         count=0
         max1=0
         j=0
-        if len(nums)==0:
-            return 0
         for num in nums:
             if num:
                 count=count+1
