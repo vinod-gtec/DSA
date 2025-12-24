@@ -4,14 +4,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        hash={}
-        res=maj=0
+        a={}
         for i in nums:
-            hash[i]=1+hash.get(i,0)
-            if hash[i]>maj:
-                res=i
-                maj=hash[i]
-        return res
+            if i in a:
+                a[i]+=1
+            else:
+                a[i]=1
+        return max(a,key=a.get)
 
 
 
