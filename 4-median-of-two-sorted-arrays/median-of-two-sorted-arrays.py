@@ -10,8 +10,7 @@ class Solution(object):
         l=len(nums1)
         nums1.sort()
         if(l%2==0):
-            a=len(nums1)
-            c=(a//2)
+            c=(l//2)
             med=float(float(nums1[c]+nums1[c-1])/2)
             return med
         else:
