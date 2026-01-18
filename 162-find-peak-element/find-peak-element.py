@@ -5,12 +5,26 @@ class Solution(object):
         :rtype: int
         """
         l=len(nums)
+        high=len(nums)-1
+        lo=0
         if l==1:
             return 0
-        for i in range(l):
-            left=nums[i-1] if i-1>=0 else float("-inf")
-            right=nums[i+1] if i+1<l else float('-inf')
+        while(lo<=high):
+            mid=(lo+high)//2
+            if mid-1<0:
+                left=float("-inf")
+            else:
+                left=nums[mid-1]
+            if mid+1>=l:
+                right=float("-inf")
+            else:
+                right=nums[mid+1]
+            if nums[mid]>left and nums[mid]>right:
+                return mid
 
-            if nums[i]>left and nums[i]>right:
-                return i
-            
+            elif nums[mid]<left:
+                high=mid-1
+            else:
+                lo=mid+1
+
+        
