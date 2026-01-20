@@ -4,13 +4,16 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        a={}
+        a = len(nums)
+        p={}
         for i in nums:
-            if i in a:
-                a[i]+=1
+            if i not in p:
+                p[i]=1
             else:
-                a[i]=1
-        return max(a,key=a.get)
+                p[i]+=1
+        return max(p,key=p.get)
+            
+
 
 
 
