@@ -5,16 +5,11 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        i=0
-        j=1
-        a=len(nums)
-        while i <a-1:
-            j=i+1
-            while j<a:
-                if nums[i]+nums[j]==target:
-                    return list([i,j])
-                else:
-                    j=j+1
-            i=i+1
+        mp={}
+        for i in range(len(nums)):
+            need = target - nums[i]
 
+            if need in mp:
+                return [mp[need],i]
+            mp[nums[i]] = i
         
