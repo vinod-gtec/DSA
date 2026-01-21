@@ -4,8 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
-        i=0
-        j=1
+        j=0
         for i in range(len(nums)):
             j=i
             while(j>0 and nums[j-1]>nums[j]):
@@ -14,6 +13,7 @@ class Solution(object):
                 nums[j-1]=temp
                 j=j-1
         return nums
+
 
 
         
