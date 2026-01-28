@@ -6,21 +6,19 @@ class Solution(object):
         """
         if len(nums)==1:
             return nums
+        n=len(nums)
         i=0
-        arr_len=len(nums)
-        if len(nums)==1:
-            return nums
-        i=0
-        arr_len=len(nums)
-        while 0 in nums:
-            nums.remove(0)
-        print(nums)
-        a=arr_len-len(nums)
-        for i in range(0,a):
-            nums.append(0)
-        print(nums)
-        print(nums)
-        a=arr_len-len(nums)
-        for i in range(0,a):
-            nums.append(0)
-        print(nums)
+        j=1
+        while(j<n):
+            if nums[i]==0 and nums[j]!=0:
+                temp=nums[i]
+                nums[i]=nums[j]
+                nums[j]=temp
+                i=i+1
+                j=j+1
+            elif nums[i]!=0:
+                i=i+1
+                j=j+1
+            else:
+                j=j+1
+        return nums
