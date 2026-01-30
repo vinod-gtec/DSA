@@ -7,11 +7,13 @@ class Solution(object):
         """
         for i in range(len(nums2)):
             nums1.append(nums2[i])
-        l=len(nums1)
         nums1.sort()
-        if(l%2==0):
-            c=(l//2)
-            med=float(float(nums1[c]+nums1[c-1])/2)
-            return med
+        if (len(nums1)%2==0):
+            mid=(len(nums1)//2)
+            mid_bef=mid-1
+            ans=float(float(nums1[mid]+nums1[mid_bef])/2)
+            return ans
         else:
-            return nums1[l//2]
+            mid=len(nums1)//2
+
+            return nums1[mid]
