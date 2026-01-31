@@ -4,13 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        b=len(nums)
+        a=len(nums)
         i=0
         j=1
-        while(j<b):
-            if(nums[i]!=nums[j]):
+        while(j<a):
+            if (nums[j]!=nums[i]):
                 i=i+1
                 nums[i]=nums[j]
             j=j+1
-        k=nums[0:i]
         return i+1
