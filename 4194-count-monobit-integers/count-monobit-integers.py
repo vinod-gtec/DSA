@@ -10,9 +10,8 @@ class Solution(object):
         if n==1:
             return 2
         count=2
-        while(i<n):
-            if (2**i)-1<=n:
-                count=count+1
+        while(2**i)-1<=n:
+            count=count+1
             i=i+1
         return count
 
