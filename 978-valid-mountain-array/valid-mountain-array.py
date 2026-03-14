@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: bool
         """
         count=0
-        dip=0
         if len(arr)<=2:
             return False
         j=0
