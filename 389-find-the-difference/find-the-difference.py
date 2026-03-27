@@ -5,8 +5,8 @@ class Solution(object):
         :type t: str
         :rtype: str
         """
-        s=list(s)
-        t=list(t)
-        for i in s:
-            t.remove(i)
-        return t[0]      
+        result = 0
+        for ch in s + t:
+            result ^= ord(ch)
+
+        return chr(result)    
