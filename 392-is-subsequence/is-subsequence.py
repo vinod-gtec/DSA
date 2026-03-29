@@ -5,8 +5,6 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        s=list(s)
-        t=list(t)
         i=0
         for j in range(len(t)):
             if i>=len(s):
