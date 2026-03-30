@@ -4,11 +4,17 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        if n==0:
-            return 0
-        elif n==1:
+        k=0
+        j=1
+        ne=0
+        if n==1:
             return 1
-        return self.fib(n-1)+self.fib(n-2)
+
+        for i in range(n-1):
+            ne=k+j
+            k=j
+            j=ne
+        return ne
 
 
 
