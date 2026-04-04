@@ -10,7 +10,6 @@ class Solution(object):
         :type l2: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        
         head1=l1
         head2=l2
         dummynode=ListNode(0)
@@ -31,7 +30,4 @@ class Solution(object):
             if l2:
                 l2=l2.next            
         return dummynode.next
-
-
-        
         
