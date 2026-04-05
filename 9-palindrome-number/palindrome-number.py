@@ -4,13 +4,11 @@ class Solution(object):
         :type x: int
         :rtype: bool
         """
-        rev=0
-        num=x
-        if x<0:
-            return False
-         
-        while(num!=0):
-            rev=rev*10+num%10
-            num=num//10
-        return rev==x
+        a=str(x)
+        b=""
+        for i in range(len(a)-1,-1,-1):
+            b=b+a[i]
+        if a==b:
+            return True
+        return False
         
