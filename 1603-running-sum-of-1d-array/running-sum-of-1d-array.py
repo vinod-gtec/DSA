@@ -7,8 +7,7 @@ class Solution(object):
         a=[]
         for i in range(len(nums)):
             summ=0
-            for j in range(0,i+1):
-                summ=summ+nums[j]
+            summ=sum(nums[0:i+1])
             a.append(summ)
         return a
         
