@@ -1,4 +1,3 @@
-INT_MIN=5*(10**4)
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
         """
@@ -17,5 +16,6 @@ class Solution(object):
             set1.add(s[right])
             maxx=max(maxx,right-left+1)
         return maxx
-
-                
+        
+        
+        
