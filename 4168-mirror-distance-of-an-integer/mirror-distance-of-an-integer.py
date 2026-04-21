@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: int
         """
         a=str(n)
-        b=a[::-1]
-        c=int(b)
-        value=abs(n-c)
+        b=int(a[::-1])
+        value=abs(n-b)
         return value
