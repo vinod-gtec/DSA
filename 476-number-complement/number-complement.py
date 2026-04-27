@@ -13,9 +13,6 @@ class Solution(object):
                 count.append("1")
         st="".join(count)
         number = int(st, 2)
-
-
-                
         return number
 
         
