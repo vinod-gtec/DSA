@@ -7,5 +7,4 @@ class Solution(object):
         """
         n1=int(num1)
         n2=int(num2)
-        final=n1*n2
-        return str(final)
+        return str(n1*n2)
