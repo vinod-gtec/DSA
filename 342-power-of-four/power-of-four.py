@@ -4,7 +4,6 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        d=n
         i=n
         if i==1:
             return True
