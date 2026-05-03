@@ -7,7 +7,8 @@ class Solution(object):
         d=n
         if n==1:
             return True
-        while(d>5):
+        seen=set()
+        while(d!=1):
             s=str(d)
             summ=0
             for i in s:
@@ -15,5 +16,9 @@ class Solution(object):
             if summ==1:
                 return True
             d=summ
+            if d in seen:
+                break
+            else:
+                seen.add(summ)
         return False
 
