@@ -7,6 +7,5 @@ class Solution(object):
         s=bin(n)[2:].zfill(32)
         a=str(s)
         b=a[::-1]
-        d=int(b,2)
-        return d
+        return int(b,2)
         
