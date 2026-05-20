@@ -5,17 +5,27 @@ class Solution(object):
         :type B: List[int]
         :rtype: List[int]
         """
-        n=len(A)
-        i=0
-        j=0
-        a=[]
-        for i in range(0,n):
-            count=0
-            for j in range(0,i+1):
-                temp=B[0:i+1]
-                if A[j] in temp:
-                    count=count+1
-            a.append(count)
-        return a
+
+        n = len(A)
+
+        freq = [0] * (n + 1)
+        ans = [0] * n
+
+        cnt = 0
+
+        for i in range(n):
+
+            freq[A[i]] += 1
+            if freq[A[i]] == 2:
+                cnt += 1
+
+            freq[B[i]] += 1
+            if freq[B[i]] == 2:
+                cnt += 1
+
+            ans[i] = cnt
+
+        return ans
+
 
             
