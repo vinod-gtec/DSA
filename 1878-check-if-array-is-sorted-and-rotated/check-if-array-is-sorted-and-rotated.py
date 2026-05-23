@@ -4,23 +4,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        b=len(nums)
-        for i in range(0,b):
-            is_sorted = True
-            for j in range(0,b-1):
-                if(nums[j]<=nums[j+1]):
-                    pass
-                else:
-                    is_sorted = False
-                    break
-            if is_sorted:
-                return True
-            temp=nums[0]
-            for j in range(0,b-1):
-                nums[j]=nums[j+1]
-            nums[b-1]=temp
-                
-        return False
-
-
-            
+        n=len(nums)
+        count=0
+        for i in range(n):
+            if nums[i]>nums[(i+1)%n]:
+                count=count+1
+        if count>1:
+            return False
+        return True
+        
+        
