@@ -4,15 +4,15 @@ class Solution(object):
         :type word: str
         :rtype: int
         """
-        a=list(word)
+        
         vaal=set()
-        for i in a:
+        for i in word:
             temp1=i.upper()
             temp2=i.lower()
             if temp1 in vaal or temp2 in vaal:
                 continue
 
-            if temp1 in a and temp2 in a:
+            if temp1 in word and temp2 in word:
                 vaal.add(temp1)
                 vaal.add(temp2)
         return len(vaal)/2
