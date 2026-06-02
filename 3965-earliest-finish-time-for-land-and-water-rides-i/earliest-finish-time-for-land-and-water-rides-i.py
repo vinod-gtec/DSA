@@ -13,10 +13,8 @@ class Solution(object):
                 landEnd=landStartTime[i]+landDuration[i]
                 temp=max(landEnd,waterStartTime[j])+waterDuration[j]
                 a.append(temp)
-        for i in range(len(waterStartTime)):
-            for j in range(len(landStartTime)):
-                waterEnd=waterStartTime[i]+waterDuration[i]
-                temp=max(waterEnd,landStartTime[j])+landDuration[j]
+                waterEnd=waterStartTime[j]+waterDuration[j]
+                temp=max(waterEnd,landStartTime[i])+landDuration[i]
                 a.append(temp)
         a.sort()
         if len(a)>0:
